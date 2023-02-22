@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+    background-image: url('../img/van.jpg');
+    background-size: cover;
+}
+
+.wrapper {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: 30px auto;
+}
+
+.book-page {
+    width: 40%;
+    height: 90%;
+    max-width: 600px;
+    min-width: 550px;
+    min-height: 650px;
+    max-height: 800px;
+    background-color: rgb(255, 237, 172);
+    border-radius: 10px;
+    border: 1px solid rgb(187, 168, 100);
+    box-shadow: 0 0 80px 20px;
+}
+
+.evidence {
+    width: 100%;
+}
+
+.evidence .grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-auto-flow: column;
+    padding: 10px 0;
+    gap: 5px 0;
+}
+
+.line {
+    width: 100%;
+    height: 0;
+    border: 1px solid black;
+    margin: 5px 0;
+}
+
+.ghosts {
+    text-align: center;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+button {
+    background-color: rgba(192, 124, 124, 0.681);
+    text-align: left;
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+    padding: 5px 8px;
+    transition: all .2s ease-in-out;
+    width: 100%;
+    border-radius: 5px;
+    max-width: 240px;
+}
+
+button:hover:not(.checked) {
+    background-color: rgba(192, 124, 124, 0.812);
+}
+
+.checked {
+    background-color: rgba(154, 191, 98, 0.62);
+}
+
+.checked:hover {
+    background-color: rgba(154, 191, 98, 0.859);
+}
+
+.ghosts ul {
+    display: block;
+    column-count: 3;
+    margin: 5px 0;
+    font-size: 1.5rem;
+}
+
+.ghosts ul li {
+    list-style: none;
+    font-weight: bold;
+    border-radius: 48%;
+    outline-offset: 1px;
+    cursor: pointer;
+}
+
+.ghosts ul li:not(.list) {
+    color: gray;
+}
+
+.list {
+    color: black;
+}
+
+p {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.ghosts ul li[design="1"] {
+    outline: 2px solid black;
+}
+
+.ghosts ul li[design="1"]:not(.list) {
+    outline: 2px solid gray;
+}
+
+.ghosts ul li[design="2"] {
+    text-decoration: line-through;
+}
